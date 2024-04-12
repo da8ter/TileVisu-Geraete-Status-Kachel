@@ -1,5 +1,5 @@
 <?php
-class TileVisuWashingMaschine extends IPSModule
+class TileVisuDeviceStatusTile extends IPSModule
 {
     public function Create()
     {
@@ -266,7 +266,7 @@ class TileVisuWashingMaschine extends IPSModule
         }
 
 
-        // Formulardaten lesen und Statusmapping Array für Bild und Farbe erstellen
+         // Formulardaten lesen und Statusmapping Array für Bild und Farbe erstellen
         $assoziationsArray = json_decode($this->ReadPropertyString('ProfilAssoziazionen'), true);
         $statusMappingImage = [];
         $statusMappingColor = [];
@@ -276,7 +276,7 @@ class TileVisuWashingMaschine extends IPSModule
                       
             $statusMappingColor[$item['AssoziationValue']] = $item['StatusColor'] === -1 ? "" : sprintf('%06X', $item['StatusColor']);
 
-            $statusMappingBalken[$item['AssoziationValue']] = $item['StatusBalken'];
+        $statusMappingBalken[$item['AssoziationValue']] = $item['StatusBalken'];
 
         }
 
@@ -319,6 +319,7 @@ class TileVisuWashingMaschine extends IPSModule
             $result['programmfortschritt'] = IPS_VariableExists($this->ReadPropertyInteger('Programmfortschritt')) ? $this->CheckAndGetValueFormatted('Programmfortschritt') : null;
             $result['programmfortschrittvalue'] = IPS_VariableExists($this->ReadPropertyInteger('Programmfortschritt')) ? GetValue($this->ReadPropertyInteger('Programmfortschritt')) : null;
             $result['restlaufzeit'] = IPS_VariableExists($this->ReadPropertyInteger('Restlaufzeit')) ? $this->CheckAndGetValueFormatted('Restlaufzeit') : null;
+            
             //$result['restlaufzeitvalue'] = IPS_VariableExists($this->ReadPropertyInteger('Restlaufzeit')) ? GetValue($this->ReadPropertyInteger('Restlaufzeit')) : null;
             
 
