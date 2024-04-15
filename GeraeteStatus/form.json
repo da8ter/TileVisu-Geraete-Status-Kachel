@@ -205,7 +205,7 @@
           "items": [
             {
               "type": "SelectVariable",
-              "name": "Program",
+              "name": "Programm",
               "caption": "Program variable:",
               "validVariableTypes": []
             },
