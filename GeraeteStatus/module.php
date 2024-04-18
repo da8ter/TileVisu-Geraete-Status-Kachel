@@ -438,8 +438,6 @@ class TileVisuDeviceStatusTile extends IPSModule
                     ];
                 }
             }
-        } else {
-            IPS_LogMessage("TileVisuWashingMaschine", "Die übergebene ID $id entspricht keiner existierenden Variable.");
         }
     
         // Konvertieren Sie Ihre Liste in JSON und aktualisieren Sie das Konfigurationsformular
