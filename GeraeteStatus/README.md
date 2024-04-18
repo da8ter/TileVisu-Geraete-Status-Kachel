@@ -11,8 +11,8 @@
 
 ### 1. Funktionsumfang
 
-* Die Geräte-Status Kachel Bildet den aktuellen Status eines Gerätes ab mit Restlaufzeit, Energieverbrauch, Gerätestatus, Programm ab... (ideal für Waschmaschine, Trockner, Spülmaschine etc.)
-* Weiterer Einsatz kann z.B. die Anzeige eines Leistungswertes sein wie z.B. die momentane Leistung einer PV-Anlage. Voraussetzung ist eine Variable die einem Wert zwischen 0 und 100% liefert.
+* Die Geräte-Status Kachel bildet den aktuellen Status eines Gerätes ab mit Restlaufzeit, Energieverbrauch, Gerätestatus und Programm. (ideal für Waschmaschine, Trockner, Spülmaschine etc.)
+* Weiterer Einsatz kann die Anzeige eines Leistungswertes sein wie z.B. die momentane Leistung einer PV-Anlage. Voraussetzung ist eine Variable die einen Wert zwischen 0 und 100% liefert.
 
 ### 2. Voraussetzungen
 
