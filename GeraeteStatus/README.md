@@ -11,7 +11,8 @@
 
 ### 1. Funktionsumfang
 
-* Die Anzeige umfasst alle relevanten Informationen einer Wallbox und ist speziell für Go-e Charger optimiert. Alle Informationen sind optional und nicht vorhandene Daten führen zum Ausblenden der jeweiligen Anzeigeabschnitte, wodurch die Kachel universell mit vielen anderen Wallbox-Typen kompatibel ist. 
+* Die Geräte-Status Kachel Bildet den aktuellen Status eines Gerätes ab mit Restlaufzeit, Energieverbrauch, Gerätestatus, Programm ab... (ideal für Waschmaschine, Trockner, Spülmaschine etc.)
+* Weiterer Einsatz kann z.B. die Anzeige eines Leistungswertes sein wie z.B. die momentane Leistung einer PV-Anlage. Voraussetzung ist eine Variable die einem Wert zwischen 0 und 100% liefert.
 
 ### 2. Voraussetzungen
 
@@ -21,7 +22,7 @@
 
 * Über den Module Store
 * Über das Module Control folgende URL hinzufügen
-https://github.com/da8ter/TileVisu-Wallbox-Kachel.git
+https://github.com/da8ter/TileVisu-Geraete-Status-Kachel.git
 
 
 ### 4. Einrichten der Instanzen in IP-Symcon
@@ -45,62 +46,39 @@ Kachelhintergrundfarbe|Farbe des Kachelhintergrunds (wird nur bei eingestellter 
 __Bild__
 Name     | Beschreibung
 -------- | ------------------
-Bildauswahl|Optionen für die Bildauswahl inklusive Go-e Charger, Go-e Charger Gemini, Universell und Eigenes Bild.
+Bildauswahl|Optionen für die Bildauswahl wie eine Waschmaschine, Wäschetrocker oder eigene Bilder.
 Bildbreite|Breite des Wallbox-Bildes, in Prozent der Kachelbreite.
-Eigenes Bild: Wallbox lädt|Auswahl eines eigenen Bildes für den Wallboxzustand "Laden".
-Eigenes Bild: Wallbox aus|Auswahl eines eigenen Bildes für den Wallboxzustand "Aus".
+Eigenes Bild: Status AN|Auswahl eines eigenen Bildes für den Gerätestatus "An".
+Eigenes Bild: Status AUS|Auswahl eines eigenen Bildes für den Gerätestatus "Aus".
 
-__Wallbox-Status__
+__Gerätestatus__
 Name     | Beschreibung
 -------- | ------------------
-Statusvariable|Variable, die den aktuellen Status der Wallbox wiedergibt, erfordert ein Variablenprofil mit Zustandsassoziationen.
+Statusvariable|Variable, die den aktuellen Status des Geräts wiedergibt. Erfordert eine Integer-Variable mit einem Variablenprofil mit Zustandsassoziationen.
 Schriftgröße|Schriftgröße des Statustextes in EM.
-Zuordnung|Zuweisung von Animation, Farbe und Bild je nach Wallbox-Status.
+Zuordnung|Zuweisung von Farbe Bild und Statusbalken aktiv je nach Gerätestatus-Status.
 
-__Ladeleistung-Anzeige__
+__Programm__
 Name     | Beschreibung
 -------- | ------------------
-Aktuelle Ladeleistung|Variablen für aktuelle Ladeleistung in KW
-Maximale Ladeleistung|Variablen für maximale Ladeleistung in KW
-Farbe Farbverlauf 1|Farbe 1 des Balken-Farbverlaufs.
-Farbe Farbverlauf 2|Farbe 3 des Balken-Farbverlaufs.
-Schriftgröße|Schriftgröße des Statustextes in EM.
+Programmvariable|Variable, die das aktuelle Programm (z.B. bei einer Waschmaschine das aktuelle Waschprogramm) des Geräts wiedergibt.
 
-__SOC-Anzeige__
+__Fortschrittsbalken__
 
-Die Informationen für den SOC und den Ziel-SOC muss der User selbst z.B. über eine API-Anbindung des PKW bereitstellen. Diese Informationen werden leider nicht durch Typ2 Wallboxen geliefert.
+Stellt den aktuellen Programmfortschritt grafisch dar. Kann prinzipiell jede Variable abbilden die einen wert zwischen 0-100% liefert.
 Name     | Beschreibung
 -------- | ------------------
-SOC|Eine Variable, die den aktuellen SOC in Prozent liefert.
-Ziel-SOC|Eine Variable, die den gewünschten SOC (Ladeziel) in Prozent liefert.
-SOC Schalter|Eine Bool-Variable, true = SOC Anzeigen, false = SOC ausblenden.
-Ziel-SOC Schalter|Eine Bool-Variable, true = Ziel-SOC Anzeigen, false = Ziel-SOC ausblenden.
-Farbe 1 Farbverlauf|Farbe 1 des Balken-Farbverlaufs.
-Farbe 2 Farbverlauf|Farbe 2 des Balken-Farbverlaufs.
-
-Mit den beiden Schalter-Variablen kann gezielt die SOC Anzeige ein- bzw. ausgeblendet werden. Dies mach z.B. Sinn wenn mehrere Autos an der Wallbox geladen werden sollen und nicht alle Autos die erforderlichen Informationen liefern.
-
-Die Schriftgröße kann unter Ladeleistung-Anzeige angepasst werden. (Identisch mit der Schriftgröße der Ladeleistung)
+Programmfortschritt|Eine Variable, die einen Wert zwischen 0-100% liefert.
+Restlaufzeit|Eine Variable, die eine Restlaufzeit in Sekunden liefert.
+Schriftgröße|Die Schriftgröße der Balkenbeschriftung in em.
+Farbe 1|Farbe 1 des Balken-Farbverlaufs.
+Farbe 2|Farbe 2 des Balken-Farbverlaufs.
 
 __Engergieverbrauch/Kosten__
 
 Name     | Beschreibung
 -------- | ------------------
-Geladen gesamt:|Eine Variable, die die gesamte geladene Energie in kWh angibt.
-Geladen aktueller Ladevorgang:|Eine Variable, die die während des aktuellen Ladevorgangs geladene Energie in kWh angibt.
-Kosten gesamt:|Eine Variable, die die gesamten Stromkosten darstellt. (Float oder Integer mit Variablenprofil "Euro")
-Kosten aktueller Ladevorgang:|Eine Variable, die die Stromkosten des aktuellen Ladevorgangs darstellt.(Float oder Integer mit Variablenprofil "Euro")
-
-__Sonstiges__
-
-Name     | Beschreibung
--------- | ------------------
-Fehler|Eine Variable, die einen möglichen Fehler als String liefert.
-Phasen|Eine Variable, die die Anzahl der aktuell genutzen Phasen liefert. (Integer oder Float mit den Zahlen 1-3)
-Kabel|Eine Variable, die eine Information zum verwendeten Kabel liefert. (Integer mit Profil-Assoziationen).
-Zugangskontrolle|Eine Variable, die eine Information zur Zugangskontrolle liefert. (Integer mit Profil-Assoziationen) 
-Verriegelung|Eine Variable, die eine Informoation zum Ver- und Entriegelungsverhalten der Wallbox liefert. (Integer mit Profil-Assoziationen)
-
-Name     | Beschreibung
--------- | ------------------
-Schriftgröße Infos|Stellt die Schriftgröße von Energieverbrauch und Sonstiges ein.
+Aktuelle Leistungsaufnahme|Eine Variable, die die aktuelle Leistungsaufnahme liefert.
+Verbrauch Heute:|Eine Variable, die den heutigen Energieverbrauch liefert.
+Kosten heute:|Eine Variable, die die Stromkosten des aktuellen Tages liefert.
+Schriftgröße:|Schriftgröße der Energieverbrauchanzeige in em
