@@ -1,6 +1,8 @@
 # Geräte-Status Kachel (Waschmaschine, Trocker, Spülmaschine etc.)
 ![Wallbox-Kachel](https://github.com/da8ter/images/blob/1c5fe63e9757e81e6d8c4c84a63e0b39fa00247c/waschmaschine.jpg)
 
+Support: https://community.symcon.de/t/html-kachelsammlung-bewohnerstatus-waermepumpe-etc/
+
 ### Inhaltsverzeichnis
 
 1. [Funktionsumfang](#1-funktionsumfang)
