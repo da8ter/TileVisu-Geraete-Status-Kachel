@@ -343,6 +343,12 @@
                             programm.className = 'programm';
                         }
                         break;
+
+                    case 'statuslabel':
+                        element.textContent = decodedData[parameter];
+                        break;
+
+
                     case 'restlaufzeit':
                         element.textContent = decodedData[parameter];
                         if (decodedData[parameter]) {
