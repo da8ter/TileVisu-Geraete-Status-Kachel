@@ -9,9 +9,9 @@ class TileVisuDeviceStatusTile extends IPSModule
 
         // Drei Eigenschaften für die dargestellten Zähler
         $this->RegisterPropertyInteger("Status", 0);
-        $this->RegisterPropertyString("StatusLabel", 0);
+        $this->RegisterPropertyString("StatusLabel", "Status");
         $this->RegisterPropertyInteger("Programm", 0);
-        $this->RegisterPropertyString("ProgrammLabel", 0);
+        $this->RegisterPropertyString("ProgrammLabel", "Programm");
         $this->RegisterPropertyInteger("Programmfortschritt", 0);
         $this->RegisterPropertyInteger("Restlaufzeit", 0);
         $this->RegisterPropertyInteger("Verbrauch", 0);
