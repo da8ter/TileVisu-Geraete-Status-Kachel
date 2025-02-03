@@ -329,12 +329,10 @@
                             root.style.setProperty('--programmfortschrittvalue', '0%');
                         }
                         break;
+
+
                     case 'statuslabel':
                         element.textContent = decodedData[parameter];
-                        if (decodedData[parameter]) {
-                            programmdiv.className = 'programm';
-                            programm.className = 'programm';
-                        }
                         break;
 
                     case 'programm':
@@ -469,7 +467,7 @@
         <div id="div1" class="hidden"><img id="image"></div>
         <div class="div2" id="div2">
             <div class="hidden" id="statusdiv"><b>
-                    <p class="status">Status:&nbsp;</p>
+                    <p class="status"><span class="statuslabel" id="statuslabel"></span>&nbsp;</p>
                 </b><span class="statustext" id="status"></span></div>
             <div class="hidden" id="programmdiv"><span class="programm"><b>Programm:</b>&nbsp;<span
                         id="programm"></span></span></div>
