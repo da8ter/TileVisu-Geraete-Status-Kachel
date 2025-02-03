@@ -11,6 +11,7 @@ class TileVisuDeviceStatusTile extends IPSModule
         $this->RegisterPropertyInteger("Status", 0);
         $this->RegisterPropertyString("StatusLabel", 0);
         $this->RegisterPropertyInteger("Programm", 0);
+        $this->RegisterPropertyString("ProgrammLabel", 0);
         $this->RegisterPropertyInteger("Programmfortschritt", 0);
         $this->RegisterPropertyInteger("Restlaufzeit", 0);
         $this->RegisterPropertyInteger("Verbrauch", 0);
@@ -358,6 +359,7 @@ class TileVisuDeviceStatusTile extends IPSModule
             $result['bildtransparenz'] =  $this->ReadPropertyFloat('Bildtransparenz');
             $result['kachelhintergrundfarbe'] =  '#' . sprintf('%06X', $this->ReadPropertyInteger('Kachelhintergrundfarbe'));
             $result['statuslabel'] = $this->ReadPropertyString('StatusLabel');
+            $result['programmlabel'] = $this->ReadPropertyString('ProgrammLabel');
 
             $imageID = $this->ReadPropertyInteger('bgImage');
             if (IPS_MediaExists($imageID)) {

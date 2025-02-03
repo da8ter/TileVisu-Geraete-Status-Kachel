@@ -210,6 +210,12 @@
           "type": "RowLayout",
           "items": [
             {
+              "type": "ValidationTextBox",
+              "name": "ProgrammLabel",
+              "caption": "Label:",
+              "value": "Programm"
+            },
+            {
               "type": "SelectVariable",
               "name": "Programm",
               "caption": "Program variable:",
