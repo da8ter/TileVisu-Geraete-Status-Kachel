@@ -114,8 +114,7 @@
             {
               "type": "ValidationTextBox",
               "name": "StatusLabel",
-              "caption": "Label:",
-              "value": "Status"
+              "caption": "Label:"
             },
             {
               "type": "SelectVariable",
@@ -212,8 +211,7 @@
             {
               "type": "ValidationTextBox",
               "name": "ProgrammLabel",
-              "caption": "Label:",
-              "value": "Programm"
+              "caption": "Label:"
             },
             {
               "type": "SelectVariable",
