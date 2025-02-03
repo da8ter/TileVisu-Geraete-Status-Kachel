@@ -112,6 +112,12 @@
           "type": "RowLayout",
           "items": [
             {
+              "type": "ValidationTextBox",
+              "name": "StatusLabel",
+              "caption": "Label:",
+              "value": "Status"
+            },
+            {
               "type": "SelectVariable",
               "name": "Status",
               "caption": "Status variable:",
