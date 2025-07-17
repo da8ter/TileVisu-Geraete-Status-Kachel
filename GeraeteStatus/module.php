@@ -195,6 +195,10 @@ class TileVisuDeviceStatusTile extends IPSModule
                     case 'ico':
                         $imageContent = 'data:image/x-icon;base64,';
                         break;
+
+                    case 'webp':
+                        $imageContent = 'data:image/webp;base64,';
+                        break;
                 }
 
                 // Nur fortfahren, falls Inhalt gesetzt wurde. Ansonsten ist das Bild kein unterstützter Dateityp
@@ -241,6 +245,10 @@ class TileVisuDeviceStatusTile extends IPSModule
         
                             case 'ico':
                                 $imageContent2 = 'data:image/x-icon;base64,';
+                                break;
+
+                            case 'webp':
+                                $imageContent2 = 'data:image/webp;base64,';
                                 break;
                         }
         
@@ -388,6 +396,10 @@ class TileVisuDeviceStatusTile extends IPSModule
     
                         case 'ico':
                             $imageContent = 'data:image/x-icon;base64,';
+                            break;
+
+                        case 'webp':
+                            $imageContent = 'data:image/webp;base64,';
                             break;
                     }
 
