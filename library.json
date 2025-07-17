@@ -2,7 +2,7 @@
     "id": "{3ABB684F-C352-DF23-1E4D-3B53E8B7603D}",
     "name": "TileVisu Geräte-Status Kachel",
     "author": "Stephan Sprick",
-    "url": "https://github.com/da8ter/TileVisu-Kachelsammlung.git",
+    "url": "https://github.com/da8ter/TileVisu-Geraete-Status-Kachel.git",
     "compatibility": {
         "version": "7.2"
     },
