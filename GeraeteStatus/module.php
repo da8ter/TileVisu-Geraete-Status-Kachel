@@ -17,10 +17,10 @@ class TileVisuDeviceStatusTile extends IPSModule
         $this->RegisterPropertyInteger("Verbrauch", 0);
         $this->RegisterPropertyInteger("VerbrauchTag", 0);
         $this->RegisterPropertyInteger("KostenTag", 0);
-        $this->RegisterPropertyFloat("StatusSchriftgroesse", 1);
-        $this->RegisterPropertyFloat("ProgrammSchriftgroesse", 1);
-        $this->RegisterPropertyFloat("InfoSchriftgroesse", 1);
-        $this->RegisterPropertyFloat("BalkenSchriftgroesse", 1);
+        $this->RegisterPropertyFloat("StatusSchriftgroesse", 12);
+        $this->RegisterPropertyFloat("ProgrammSchriftgroesse", 12);
+        $this->RegisterPropertyFloat("InfoSchriftgroesse", 12);
+        $this->RegisterPropertyFloat("BalkenSchriftgroesse", 12);
         $this->RegisterPropertyInteger("BalkenVerlaufFarbe1", 2674091);
         $this->RegisterPropertyInteger("BalkenVerlaufFarbe2", 2132596);
         $this->RegisterPropertyInteger("Bildauswahl", 0);
