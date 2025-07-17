@@ -18,11 +18,11 @@
             /* Ergänzende Farbe setzen */
             --programmfortschrittvalue: 0%;
             /* Standardwert setzen */
-            --statusschriftgroesse: 1em;
+            --statusschriftgroesse: 12px;
             /* Standard Schriftgröße */
-            --programmschriftgroesse: 1em;
-            --infoschriftgroesse: 1em;
-            --balkenschriftgroesse: 1em;
+            --programmschriftgroesse: 12px;
+            --infoschriftgroesse: 12px;
+            --balkenschriftgroesse: 12px;
             --bildbreite: 20%;
         }
 
@@ -67,7 +67,7 @@
             display: flex;
             flex-wrap: nowrap;
 
-            font-size: 1em;
+            font-size: 12px;
             justify-content: center;
             /* Zentriert die Inhalte horizontal */
             box-sizing: border-box;
@@ -420,16 +420,16 @@
                         root.style.setProperty('--balkenverlauffarbe2', decodedData[parameter]);
                         break;
                     case 'statusschriftgroesse':
-                        root.style.setProperty('--statusschriftgroesse', decodedData[parameter] + 'em');
+                        root.style.setProperty('--statusschriftgroesse', decodedData[parameter] + 'px');
                         break;
                     case 'programmschriftgroesse':
-                        root.style.setProperty('--programmschriftgroesse', decodedData[parameter] + 'em');
+                        root.style.setProperty('--programmschriftgroesse', decodedData[parameter] + 'px');
                         break;
                     case 'infoschriftgroesse':
-                        root.style.setProperty('--infoschriftgroesse', decodedData[parameter] + 'em');
+                        root.style.setProperty('--infoschriftgroesse', decodedData[parameter] + 'px');
                         break;
                     case 'balkenschriftgroesse':
-                        root.style.setProperty('--balkenschriftgroesse', decodedData[parameter] + 'em');
+                        root.style.setProperty('--balkenschriftgroesse', decodedData[parameter] + 'px');
                         break;
                     case 'bildbreite':
                         root.style.setProperty('--bildbreite', decodedData[parameter] + '%');
